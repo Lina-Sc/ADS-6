@@ -15,14 +15,12 @@ class TPQueue {
             arr[0] = m;
             ++r;
             ++count;
-        }
-        else {
+        } else {
             for (int i = r; i > l; --i) {
                 if (arr[(i - 1) % size].prior >= m.prior) {
                     arr[i % size] = m;
                     break;
-                }
-                else {
+                } else {
                     arr[i % size] = arr[(i - 1) % size];
                     arr[(i - 1)%size] = m;
                 }
